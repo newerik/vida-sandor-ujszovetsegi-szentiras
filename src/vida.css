@@ -1,0 +1,64 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (min-width: 1600px) {
+    body {
+        width: 680px;
+        margin: auto;
+    }
+}
+
+@page {
+    size: A4;
+}
+
+@page: left {
+    @bottom-left {
+        content: "Page " counter(page) " of " counter(pages);
+    }
+}
+
+@page :right {
+    @top-right {
+        content: string(doctitle);
+        margin: 30pt 0 10pt 0;
+        font-size: 8pt;
+    }
+}
+
+h1 {
+    text-align: center;
+    string-set: doctitle content();
+}
+
+section {
+    column-count: 2;
+    column-gap: 24pt;
+    column-rule: 1px solid silver;
+}
+
+p {
+    font-size: 12pt;
+    text-indent: 12pt;
+    text-align: justify;
+    margin: 0;
+}
+
+.first-verse:first-child {
+    margin: 0;
+}
+
+.first-verse {
+    margin-top: 12px;
+    text-indent: 0;
+}
+
+.drop-cap {
+    float: left;
+    font-size: 30pt;
+    font-weight: bold;
+    margin-right: 6pt;
+    text-indent: 12pt;
+    line-height: 28pt;
+}
