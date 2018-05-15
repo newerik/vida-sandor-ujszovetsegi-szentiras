@@ -1,0 +1,23 @@
+{
+  "name": "vida-sandor-ujszovetsegi-szentiras",
+  "version": "0.1.0",
+  "description": "To turn **Vida Sándor - Újszövetségi Szentírás** into an easily printable format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newerik/vida-sandor-ujszovetsegi-szentiras.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newerik/vida-sandor-ujszovetsegi-szentiras/issues"
+  },
+  "homepage": "https://github.com/newerik/vida-sandor-ujszovetsegi-szentiras#readme",
+  "dependencies": {
+    "prince": "^1.4.9"
+  }
+}
