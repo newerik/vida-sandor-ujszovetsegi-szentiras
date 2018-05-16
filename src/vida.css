@@ -3,7 +3,7 @@ body {
     counter-reset: page 1;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 680px) {
     body {
         width: 680px;
         margin: auto;
@@ -11,51 +11,73 @@ body {
 }
 
 h1 {
+    font-size: 20pt;
     text-align: center;
     string-set: doctitle content();
 }
 
 section {
     column-count: 2;
-    column-gap: 24pt;
-    column-rule: 1px solid silver;
+    column-gap: 20pt;
+    column-rule: 0.5pt solid silver;
 }
 
 p {
-    font-size: 12pt;
-    text-indent: 12pt;
+    font-size: 9pt;
+    line-height: 11pt;
+    text-indent: 9pt;
     text-align: justify;
     margin: 0;
+    hyphens: auto;
+}
+
+.first-verse {
+    margin-top: 11pt;
+    text-indent: 0;
 }
 
 .first-verse:first-child {
     margin: 0;
 }
 
-.first-verse {
-    margin-top: 12px;
-    text-indent: 0;
-}
-
 .drop-cap {
     float: left;
-    font-size: 30pt;
+    font-size: 23pt;
     font-weight: bold;
-    margin-right: 6pt;
-    text-indent: 12pt;
-    line-height: 28pt;
+    margin-right: 4pt;
+    text-indent: 9pt;
+    line-height: 21pt;
 }
 
 @page {
-    size: A4;
-    @top-center {
+    size: A5;
+    margin: 1.2cm 1cm 0.7cm 1cm;
+    padding-top: 3mm;
+    border-top: 0.5pt solid silver;
+    @top-left {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    @top-right {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+@page :left {
+    margin-right: 1.5cm;
+    @top-left {
+        content: counter(page);
+    }
+    @top-right {
+        content: string(doctitle);
+    }
+}
+
+@page :right {
+    margin-left: 1.5cm;
+    @top-left {
         content: string(doctitle);
     }
     @top-right {
         content: counter(page);
     }
 }
-
-@page :left {}
-
-@page :right {}

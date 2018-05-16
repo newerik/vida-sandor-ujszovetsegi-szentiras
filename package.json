@@ -4,7 +4,8 @@
   "description": "To turn **Vida Sándor - Újszövetségi Szentírás** into an easily printable format.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node to-pdf.js",
+    "prince": "\"node_modules\\prince\\prince\\program files\\Prince\\engine\bin\\prince.exe\" src/vida.html -o output/vida.pdf"
   },
   "repository": {
     "type": "git",
